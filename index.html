@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Git & GitHub Quick Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .command {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 8px 0;
+            font-family: monospace;
+        }
+
+        .desc {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .box {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: gray;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Git & GitHub Quick Notes</h1>
+
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <div class="box">
+        <h2>📌 Basic Git Setup</h2>
+        <div class="command">git config --global user.name "Your Name"</div>
+        <div class="desc">Set your username</div>
+
+        <div class="command">git config --global user.email "your@email.com"</div>
+        <div class="desc">Set your email</div>
+    </div>
+
+    <div class="box">
+        <h2>📂 Initialize Repository</h2>
+        <div class="command">git init</div>
+        <div class="desc">Create a new Git repository</div>
+    </div>
+
+    <div class="box">
+        <h2>➕ Add & Commit</h2>
+        <div class="command">git add .</div>
+        <div class="desc">Add all files to staging</div>
+
+        <div class="command">git commit -m "Your message"</div>
+        <div class="desc">Save changes with a message</div>
+    </div>
+
+    <div class="box">
+        <h2>🔗 Connect to GitHub</h2>
+        <div class="command">git remote add origin https://github.com/username/repo.git</div>
+        <div class="desc">Link your local repo to GitHub</div>
+    </div>
+
+    <div class="box">
+        <h2>🚀 Push Code</h2>
+        <div class="command">git push -u origin main</div>
+        <div class="desc">Upload code to GitHub</div>
+    </div>
+
+    <div class="box">
+        <h2>⬇️ Pull Code</h2>
+        <div class="command">git pull origin main</div>
+        <div class="desc">Download latest changes</div>
+    </div>
+
+    <div class="box">
+        <h2>📊 Check Status</h2>
+        <div class="command">git status</div>
+        <div class="desc">See current changes</div>
+    </div>
+
+    <footer>
+        Simple Git & GitHub Guide | Beginner Friendly 🚀
+    </footer>
+</div>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            document.body.style.background = "#121212";
+            document.querySelector(".container").style.background = "#1e1e1e";
+            document.querySelectorAll(".desc").forEach(el => el.style.color = "#ccc");
+        } else {
+            document.body.style.background = "#f4f6f8";
+            document.querySelector(".container").style.background = "white";
+            document.querySelectorAll(".desc").forEach(el => el.style.color = "#555");
+        }
+    }
+</script>
+
+</body>
+</html>
